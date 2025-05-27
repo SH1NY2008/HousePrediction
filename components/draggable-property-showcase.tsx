@@ -54,7 +54,6 @@ export function DraggablePropertyShowcase() {
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
             Explore our latest property valuations with interactive, draggable cards
           </p>
-          <p className="text-sm text-gray-500">🏠 Drag these property cards to see them in action!</p>
         </div>
 
         <DraggableCardContainer className="flex flex-wrap justify-center gap-8">
