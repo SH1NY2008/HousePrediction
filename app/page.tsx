@@ -26,6 +26,7 @@ import { DraggablePropertyShowcase } from "@/components/draggable-property-showc
 import { CompareDemo } from "@/components/Compare"
 import { SparklesCore } from "@/components/sparkles-core"
 import { motion } from "motion/react"
+import { BentoGridThirdDemo } from "@/components/BentoGrid" // Import the BentoGrid component
 
 export default function HomePage() {
   const features = [
@@ -86,6 +87,7 @@ export default function HomePage() {
   ]
 
   return (
+    
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white overflow-hidden relative">
       {/* Enhanced Background Effects */}
       <div className="fixed inset-0 z-0">
@@ -412,10 +414,15 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* Enhanced Comparison Section */}
+          
+
+          {/* BentoGridThird Section */}
           <section className="py-32 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/50 to-gray-900/80 backdrop-blur-sm" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#090C9B]/5 to-[#3772FF]/5 opacity-50"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-950/50 via-gray-900/30 to-gray-950/50" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-7xl">
+              <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#3772FF]/5 rounded-full blur-[200px]"></div>
+              <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-[#00BFB2]/5 rounded-full blur-[200px]"></div>
+            </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <motion.div
@@ -425,27 +432,24 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="text-center mb-20"
               >
-                <Badge className="mb-6 bg-gradient-to-r from-[#090C9B]/20 to-[#3772FF]/20 text-[#090C9B] border-[#090C9B]/30 py-3 px-6 text-sm font-medium backdrop-blur-sm">
-                  INTERACTIVE COMPARISON
+                <Badge className="mb-6 bg-gradient-to-r from-[#3772FF]/20 to-[#090C9B]/20 text-[#3772FF] border-[#3772FF]/30 py-3 px-6 text-sm font-medium backdrop-blur-sm">
+                  AI FEATURES
                 </Badge>
-                <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-[#090C9B] to-[#3772FF] bg-clip-text text-transparent leading-tight">
-                  Before & After Renovations
+                <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-[#3772FF] to-[#00BFB2] bg-clip-text text-transparent leading-tight">
+                  Smart Property Analysis
                 </h2>
                 <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                  See how property improvements impact valuation with our interactive comparison tool
+                  Discover how our AI tools help you make better property decisions
                 </p>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="flex justify-center"
               >
-                <div className="p-2 rounded-3xl bg-gradient-to-r from-[#090C9B] via-[#3772FF] to-[#090C9B] shadow-2xl">
-                  <CompareDemo />
-                </div>
+                <BentoGridThirdDemo />
               </motion.div>
             </div>
           </section>
@@ -575,3 +579,167 @@ export default function HomePage() {
     </div>
   )
 }
+
+{
+  /* AI Technology Showcase Section */
+  
+  <section className="py-32 relative overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-950/50 via-gray-900/30 to-gray-950/50" />
+    <div className="absolute inset-0 bg-gradient-to-r from-[#3772FF]/5 to-[#00BFB2]/5 opacity-50"></div>
+    
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-center mb-20"
+      >
+        <Badge className="mb-6 bg-gradient-to-r from-[#3772FF]/20 to-[#00BFB2]/20 text-[#3772FF] border-[#3772FF]/30 py-3 px-6 text-sm font-medium backdrop-blur-sm">
+          AI TECHNOLOGY
+        </Badge>
+        <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-[#3772FF] to-[#00BFB2] bg-clip-text text-transparent leading-tight">
+          Powered by Advanced AI
+        </h2>
+        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          Our platform leverages cutting-edge artificial intelligence to deliver precise property valuations
+        </p>
+      </motion.div>
+    
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+      </motion.div>
+    </div>
+  </section>
+}
+
+
+
+{
+  /* Enhanced CTA Section */
+  <section className="py-32 relative overflow-hidden">
+    <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00BFB2]/10 to-transparent"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-[#00BFB2]/20 rounded-full blur-[200px]"></div>
+    </div>
+
+    <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <Badge className="mb-8 bg-gradient-to-r from-[#00BFB2]/20 to-[#028090]/20 text-[#00BFB2] border-[#00BFB2]/30 py-3 px-6 text-sm font-medium backdrop-blur-sm">
+          GET STARTED TODAY
+        </Badge>
+        <h2 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-[#00BFB2] to-gray-300 bg-clip-text text-transparent leading-tight">
+          Ready to Discover Your Property's True Value?
+        </h2>
+        <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
+          Join thousands of property owners, investors, and real estate professionals who trust PricePredict for
+          accurate valuations.
+        </p>
+        <Link href="/predict">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-[#00BFB2] to-[#028090] hover:from-[#00BFB2]/90 hover:to-[#028090]/90 shadow-2xl shadow-[#00BFB2]/30 transition-all duration-300 text-xl px-12 py-8 rounded-2xl"
+            >
+              Get Your Free Valuation
+              <ArrowRight className="ml-3 h-6 w-6" />
+            </Button>
+          </motion.div>
+        </Link>
+      </motion.div>
+    </div>
+  </section>
+}
+{
+  /* Enhanced Footer */
+  <footer className="bg-gradient-to-br from-gray-900/90 via-gray-800/80 to-gray-900/90 backdrop-blur-xl border-t border-gray-700/50 relative overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00BFB2]/5 to-transparent opacity-30"></div>
+
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="col-span-1 md:col-span-2">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="p-3 bg-gradient-to-r from-[#00BFB2] to-[#028090] rounded-xl shadow-lg">
+              <Home className="h-6 w-6 text-white" />
+            </div>
+            <span className="text-2xl font-bold bg-gradient-to-r from-[#00BFB2] to-[#028090] bg-clip-text text-transparent">
+              PricePredict
+            </span>
+          </div>
+          <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
+            The most advanced AI-powered property valuation platform. Get accurate, instant property valuations
+            with confidence.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="font-bold text-white mb-6 text-lg">Product</h3>
+          <ul className="space-y-3 text-gray-300">
+            <li>
+              <a href="#" className="hover:text-white transition-colors flex items-center gap-3 group">
+                <span className="w-1 h-1 rounded-full bg-[#00BFB2] group-hover:w-2 transition-all"></span>
+                Features
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white transition-colors flex items-center gap-3 group">
+                <span className="w-1 h-1 rounded-full bg-[#00BFB2] group-hover:w-2 transition-all"></span>
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white transition-colors flex items-center gap-3 group">
+                <span className="w-1 h-1 rounded-full bg-[#00BFB2] group-hover:w-2 transition-all"></span>
+                API
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-bold text-white mb-6 text-lg">Company</h3>
+          <ul className="space-y-3 text-gray-300">
+            <li>
+              <a href="#" className="hover:text-white transition-colors flex items-center gap-3 group">
+                <span className="w-1 h-1 rounded-full bg-[#028090] group-hover:w-2 transition-all"></span>
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white transition-colors flex items-center gap-3 group">
+                <span className="w-1 h-1 rounded-full bg-[#028090] group-hover:w-2 transition-all"></span>
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white transition-colors flex items-center gap-3 group">
+                <span className="w-1 h-1 rounded-full bg-[#028090] group-hover:w-2 transition-all"></span>
+                Privacy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-gray-700/50 mt-12 pt-8 text-center">
+        <p className="text-gray-400">
+          © 2024 PricePredict. All rights reserved. | Powered by Advanced AI & Machine Learning
+        </p>
+      </div>
+    </div>
+  </footer>
+}
+
